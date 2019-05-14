@@ -1,0 +1,102 @@
+.contact {
+  color: #fff;
+  height: 30%;
+  background-color: $contactBGC;
+
+  label {
+    display: inline-block;
+    margin: 2px 15px;
+  }
+
+  // -----------inputs
+  %shared-inputs {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 50px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  %invalid {
+    border: 2px solid transparent;
+  }
+
+  %valid {
+    border: 2px solid $validBorderColor;
+  }
+
+  %focus {
+    outline: none;
+  }
+
+  textarea {
+    @extend %shared-inputs;
+    min-height: 61px;
+    &:invalid {
+      @extend %invalid;
+    }
+    &:valid {
+      @extend %valid;
+    }
+    &:focus {
+      @extend %focus;
+    }
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"] {
+      @extend %shared-inputs;
+    }
+    &:invalid {
+      @extend %invalid;
+    }
+    &:valid {
+      @extend %valid;
+    }
+    &:focus {
+      @extend %focus;
+    }
+    &[type="submit"] {
+      border: {
+        radius: 5px;
+        color: $validBorderColor;
+      }
+      margin: 0 15px;
+    }
+  }
+
+  // -----------icons
+  %shared-icon {
+    background: {
+      size: 30px;
+      repeat: no-repeat;
+      position: 8px 4px;
+    }
+  }
+
+  #name {
+    background-image: url('../../images/name.svg');
+    @extend %shared-icon;
+  }
+
+  #email {
+    background-image: url('../../images/email.svg');
+    @extend %shared-icon;
+    background-position: 8px 3px;
+  }
+
+  #message {
+    background-image: url('../../images/message.svg');
+    @extend %shared-icon;
+  }
+
+// -----------vendor specific
+  :invalid, 
+  :-moz-submit-invalid, 
+  :-moz-ui-invalid 
+  {
+    box-shadow: none;
+  }
+}

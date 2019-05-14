@@ -1,0 +1,99 @@
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 66px;
+  max-height: 66px;
+  background-color: $navFootBGC;
+
+  &__menu-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    max-height: 0;
+    background-color: $navFootBGC;
+    transition: max-height 0.2s ease-out;
+  }
+  
+  li {
+    margin: 1.5rem;
+    margin-right: 4rem;
+  }
+  
+  a {
+    color: $navFootColor;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+
+  // -----------burger menu
+  %burger-recipe {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: $navFootColor;
+    border-radius: 5px;
+    transition: transform .3s ease-out;
+  }
+
+  &__burger-box {
+    position: absolute;
+    top: 23.5px;
+    right: 10px;
+    width: 20px;
+    height: 19px;
+    z-index: 10;
+    cursor: pointer; 
+
+    &::before {
+      @extend %burger-recipe;
+      content: "";
+      top: 0;
+      transform-origin: 0 0;
+    }
+
+    .main-nav__burger {
+      @extend %burger-recipe;
+      top: 8px;
+      transform-origin: 0 50%;
+    }
+    
+    &::after {
+      @extend %burger-recipe;
+      content: "";
+      bottom: 0;
+      transform-origin: 0 100%;
+    }
+  }
+
+// -----------burger menu animation
+  &__burger-box--xed {
+    &::before {
+      transform: rotate(45deg) scaleX(1.25);
+    }
+
+    .main-nav__burger {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &::after {
+      transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+    }
+  }
+
+// -----------media queries
+  @include small {
+    &__burger-box {
+      display: none;
+    }
+    &__menu-content {
+      flex-direction: row;
+      max-height: none;
+    }
+  }
+}
