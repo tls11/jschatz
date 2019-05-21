@@ -1,18 +1,17 @@
 .contact {
   color: #fff;
-  height: 30%;
   background-color: $contactBGC;
 
   label {
-    display: inline-block;
-    margin: 2px 15px;
+    display: block;
+    margin-top: 20px;
   }
 
   // -----------inputs
   %shared-inputs {
     display: block;
     margin-bottom: 20px;
-    padding: 10px 10px 10px 50px;
+    padding: 10px;
     border: 2px solid transparent;
     border-radius: 5px;
     width: 100%;
@@ -65,31 +64,6 @@
       }
       margin: 0 15px;
     }
-  }
-
-  // -----------icons
-  %shared-icon {
-    background: {
-      size: 30px;
-      repeat: no-repeat;
-      position: 8px 4px;
-    }
-  }
-
-  #name {
-    background-image: url('../../images/name.svg');
-    @extend %shared-icon;
-  }
-
-  #email {
-    background-image: url('../../images/email.svg');
-    @extend %shared-icon;
-    background-position: 8px 3px;
-  }
-
-  #message {
-    background-image: url('../../images/message.svg');
-    @extend %shared-icon;
   }
 
 // -----------vendor specific

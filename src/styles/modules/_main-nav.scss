@@ -14,6 +14,10 @@
     max-height: 0;
     background-color: $navFootBGC;
     transition: max-height 0.2s ease-out;
+
+    &.opened {
+      max-height: 200px;
+    }
   }
   
   li {
@@ -71,7 +75,7 @@
   }
 
 // -----------burger menu animation
-  &__burger-box--xed {
+  &__burger-box--transform {
     &::before {
       transform: rotate(45deg) scaleX(1.25);
     }
