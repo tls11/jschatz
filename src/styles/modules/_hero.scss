@@ -1,6 +1,105 @@
 .hero {
-  height: 25rem;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-image: url('../../images/header-bg.svg');
+  background-size: cover;
+  overflow: hidden;
+
+  &__text {
+    margin: 2rem 0;
+  }
+
+  %hero-text {
+    font-family: 'Coda', cursive;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    @extend %hero-text;
+    font-size: 75px;
+    color: $white;
+  }
+
+  h2 {
+    @extend %hero-text;
+    font-size: 25px;
+    color: $darkGray;
+  }
+
+  .medals {
+    padding-bottom: 2rem;
+  }
+
+  .frame {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 5px solid $white;
+    border-radius: 50%;
+    margin-right: 1rem;
+    color: $darkGray;
+    overflow: hidden;
+
+    .avatar {
+      position:absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+      border-radius: 50%;
+    }
+
+    .avatar--twitter {
+      background:url('../../images/js-twitter.jpg');
+      background-size: cover;
+    }
+    .avatar--linkedin {
+      background:url('../../images/js-linkedIn.jpg');
+      background-size: cover;
+    }
+    .avatar--github {
+      background:url('../../images/js-github.jpg');
+      background-size: cover;
+    }
+    .avatar--gitlab {
+      background:url('../../images/js-gitlab.png');
+      background-size: cover;
+    }
+
+    %absolutely-centered {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .logo-container {
+      @extend %absolutely-centered;
+      backface-visibility: hidden;
+    }
+
+    .fa-twitter {
+      @extend %absolutely-centered;
+      font-size: 72px;
+    }
+    
+    .fa-linkedin-in {
+      @extend %absolutely-centered;
+      font-size: 67px;
+    }
+
+    .fa-github {
+      @extend %absolutely-centered;
+      font-size: 92px;
+      left: -1;
+    }
+
+    .fa-gitlab {
+      @extend %absolutely-centered;
+      font-size: 76px;
+      top: 7px;
+    }
+  }
 }

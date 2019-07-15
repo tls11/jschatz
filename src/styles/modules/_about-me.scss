@@ -1,5 +1,5 @@
 .about-me {
-  background-color: $aboutMeBGC;
+  background-color: #f9f9f9;
   line-height: 1.3;
 
   #about-me {
@@ -10,13 +10,13 @@
   }
 
   &__profile-pic {
-    border: 5px solid $profileBorderColor;
+    border: 5px solid $gray;
     border-radius: 50%;
     float: left;
     width: 150px;
     height: 150px;
     margin: {
-      right: 8px;
+      right: 30px;
       bottom: 5px;
     }
     shape-outside: circle(51%);
