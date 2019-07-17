@@ -32,12 +32,12 @@
 
   .frame {
     display: inline-block;
-    position: relative;
     width: 100px;
     height: 100px;
     border: 5px solid $white;
     border-radius: 50%;
-    margin-right: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
     color: $darkGray;
     overflow: hidden;
 
@@ -93,7 +93,7 @@
     .fa-github {
       @extend %absolutely-centered;
       font-size: 92px;
-      left: -1;
+      left: -1px;
     }
 
     .fa-gitlab {

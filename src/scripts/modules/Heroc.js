@@ -26,7 +26,7 @@ class Hero {
 
       frame.animation = this.createTlFlip(this.logo, this.avatar);
       frame.addEventListener('mouseover', e => e.currentTarget.animation.play());
-      frame.addEventListener('mouseout', e =>  e.currentTarget.animation.reverse());
+      frame.addEventListener('mouseout', e => e.currentTarget.animation.reverse());
     });
   }
 
