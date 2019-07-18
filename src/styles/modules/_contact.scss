@@ -1,0 +1,76 @@
+.contact {
+  color: #fff;
+  background-color: $contactBGC;
+
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+
+  // -----------inputs
+  %shared-inputs {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  %invalid {
+    border: 2px solid transparent;
+  }
+
+  %valid {
+    border: 2px solid $validBorderColor;
+  }
+
+  %focus {
+    outline: none;
+  }
+
+  textarea {
+    @extend %shared-inputs;
+    min-height: 61px;
+    &:invalid {
+      @extend %invalid;
+    }
+    &:valid {
+      @extend %valid;
+    }
+    &:focus {
+      @extend %focus;
+    }
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"] {
+      @extend %shared-inputs;
+    }
+    &:invalid {
+      @extend %invalid;
+    }
+    &:valid {
+      @extend %valid;
+    }
+    &:focus {
+      @extend %focus;
+    }
+    &[type="submit"] {
+      border: {
+        radius: 5px;
+        color: $validBorderColor;
+      }
+      margin: 0 15px;
+    }
+  }
+
+// -----------vendor specific
+  :invalid, 
+  :-moz-submit-invalid, 
+  :-moz-ui-invalid 
+  {
+    box-shadow: none;
+  }
+}

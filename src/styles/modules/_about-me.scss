@@ -1,0 +1,24 @@
+.about-me {
+  background-color: $aboutMeBGC;
+  line-height: 1.3;
+
+  #about-me {
+    display: block;
+    position: relative;
+    top: -82px;
+    visibility: hidden;
+  }
+
+  &__profile-pic {
+    border: 5px solid $profileBorderColor;
+    border-radius: 50%;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: {
+      right: 8px;
+      bottom: 5px;
+    }
+    shape-outside: circle(51%);
+  }
+}

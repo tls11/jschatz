@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One|Lobster+Two|Roboto" rel="stylesheet">
+  <title>The Jacob Schatz Website</title>
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="main-nav__burger-box">
+      <div class="main-nav__burger"></div>
+    </div>
+    <ul class="main-nav__menu-content">
+      <li class="logo"><a href="#">logo</a></li>
+      <li><a href="#about-me" target="_self">About Me</a></li>
+      <li><a href="#contact" target="_self">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="hero">
+    HERO HERE
+  </div>
+  <div>
+    <section class="about-me">
+      <span id="about-me"></span>
+      <div class="corset">
+        <img class="about-me__profile-pic" src="./images/handsome_man.jpg" alt="Handsome Jacob Schatz">
+        <p>
+          Jacob started programming in 2006. He hasn't stopped since. He is always writing code and coming up
+          with crazy ideas. He spends most of his time writing Javascript, HTML and CSS. He also enjoys writing many other
+          languages. He has written 2 books on Swift for Pearson. He has a popular YouTube channel under a secret
+          pseudonym. He has a degree in piano performance and plays classical concerts frequently.
+          Overall a very nice guy.
+        </p>
+        <p>
+          Jacob started at GitLab in 2015 as the first frontend engineer. He went on to lead the frontend
+          team, UX team, and lead an awesome data science GitLab startup: <a href="https://meltano.com" target="_blank">Meltano</a>.
+          He has touched almost all parts of GitLab in his time there. He came up with the idea for the WebIDE
+          and created the first prototype among other things.
+        </p>
+        <p>
+          Jacob Schatz works at Netlify as the Product Engineering Manager.
+        </p>
+        <p>
+          Jacob also speaks at conferences. He has spoken all over the world about <a href="https://vuejs.org" target="_blank">VueJS</a>.
+        </p>
+        <p>
+          Jacob also loves working on electronics and creates really fun electric vehicles. His goal in life
+          is to use gas cars less and use electric vehicles more.
+        </p>
+        <p>
+          Jacob is a proud member of <a href="https://www.lpaonline.org" target="_blank">Little People of America</a>.
+          Although he does not have dwarfism himself, he has 2 sons who both have a
+          <a href="https://en.wikipedia.org/wiki/Diastrophic_dysplasia" target="_blank">very rare form of dwarfism</a>
+          that affects 1 in 500,000 people in the world.
+        </p>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="corset">
+        <h2>Contact</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <label>Name
+            <input type="text" name="name" placeholder="Your Name Here" required minlength="3">
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="Your Email Here" required>
+          </label>
+          <label>Message to moi
+            <textarea name="message" placeholder="Stuff & Things" required minlength="15"></textarea>
+          </label>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+  </div>
+  <footer class="main-footer">
+    <p>&copy; Jacob Schatz 2019</p>
+  </footer>
+</body>
+</html>

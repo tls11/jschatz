@@ -1,0 +1,22 @@
+.corset {
+  padding: 0 5vw;
+}
+
+// -----------media queries
+@include small {
+  .corset {
+    padding: 0 10vw;
+  }
+}
+
+@include medium {
+  .corset {
+    padding: 0 22vw;
+  }
+}
+
+@include large {
+  .corset {
+    padding: 0 30vw;
+  }
+}
