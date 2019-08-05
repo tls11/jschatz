@@ -1,6 +1,6 @@
 .contact {
-  color: #fff;
-  background-color: $contactBGC;
+  color: $white;
+  background-color: $primaryBlue;
 
   label {
     display: block;
@@ -22,7 +22,7 @@
   }
 
   %valid {
-    border: 2px solid $validBorderColor;
+    border: 2px solid $darkGray;
   }
 
   %focus {
@@ -58,11 +58,18 @@
       @extend %focus;
     }
     &[type="submit"] {
+      background-color: $white;
+      font-weight: 400;
+      cursor: pointer;
+      user-select: text;
+      border: 1px solid transparent;
+      padding: .375rem .75rem;
+      line-height: 1.5;
       border: {
         radius: 5px;
-        color: $validBorderColor;
+        color: $darkGray;
       }
-      margin: 0 15px;
+      
     }
   }
 
