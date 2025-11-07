@@ -40,6 +40,7 @@
     margin-right: .5rem;
     color: $darkGray;
     overflow: hidden;
+    transform-style: preserve-3d;
 
     .avatar {
       position:absolute;
@@ -76,30 +77,36 @@
     }
 
     .logo-container {
-      @extend %absolutely-centered;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       backface-visibility: hidden;
     }
 
     .fa-twitter {
-      @extend %absolutely-centered;
       font-size: 72px;
+      transform: translateY(2px);
     }
-    
+
     .fa-linkedin-in {
-      @extend %absolutely-centered;
       font-size: 67px;
+      transform: translateX(1px);
     }
 
     .fa-github {
-      @extend %absolutely-centered;
       font-size: 92px;
-      left: -1px;
+      margin-left: -1px;
     }
 
     .fa-gitlab {
-      @extend %absolutely-centered;
       font-size: 76px;
-      top: 7px;
+      margin-top: 10px;
+      transform: translateY(-2px);
     }
   }
 }
